@@ -33,7 +33,18 @@
       "react-app/jest"
     ]
   },
-
+  "browserslist": {
+    "production": [
+      ">99%",
+      "dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "devDependencies": {
     "@hookform/resolvers": "^2.8.3"
   }
