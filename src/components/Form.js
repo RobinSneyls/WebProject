@@ -28,32 +28,6 @@ const onSubmit = (data) => {
     localStorage.setItem('текcт', data.textArea);
     localStorage.setItem('чекбокс', data.checkBox);
 
-    axios
-      .post('https://formcarry.com/s/-Qb4qbj86zk', data, {
-        headers: { Accept: 'application/json' },
-      })
-      .then(function (response) {
-        console.log(response);
-        setLoadActive(initialState);
-        setBtnDisable(false);
-        Swal.fire({
-          title: 'Получилось!',
-          text: 'Форма успешно отправлена!',
-          icon: 'success',
-        });
-        reset({});
-      })
-      .catch(function (error) {
-        console.log(error);
-        setLoadActive(initialState);
-        setBtnDisable(false);
-        Swal.fire({
-          icon: 'error',
-          title: 'Что-то пошло не так!',
-          text: 'Попробуйте ещё раз',
-        });
-      });
-  };
   
   const initialState = 'Оставить заявку!';
   const [loadActive, setLoadActive] = useState(initialState);
