@@ -61,20 +61,8 @@ export const Navbar = () => {
                 </ul>
               </li>
               {MenuItems.map((item, index) => {
-                return (
-                  <li className="nav__item" key={index}>
-                    <Link
-                      to={item.to}
-                      spy={true}
-                      className={item.cName}
-                      activeClass={item.activeClass}
-                      offset={item.offset}
-                      onClick={closeMobileMenu}
-                    >
-                      {item.title}
-                    </Link>
-                  </li>
-                );
+               
+                
               })}
             </ul>
           </div>
