@@ -29,7 +29,7 @@ const onSubmit = (data) => {
     localStorage.setItem('чекбокс', data.checkBox);
 
     axios
-      .post('https://formcarry.com/s/U1_4O8sQsWN', data, {
+      .post('https://formcarry.com/s/-Qb4qbj86zk', data, {
         headers: { Accept: 'application/json' },
       })
       .then(function (response) {
