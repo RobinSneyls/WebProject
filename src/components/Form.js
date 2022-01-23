@@ -161,14 +161,7 @@ const onSubmit = (data) => {
           данных
         </p>
       </label>
-      <Button
-        disabled={btnDisable}
-        type="submit"
-        buttonStyle="btn--solid"
-        buttonSize="btn--Big"
-      >
-        {loadActive}
-      </Button>
+     
     </form>
   );
 }
