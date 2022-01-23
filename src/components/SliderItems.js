@@ -70,3 +70,4 @@ export const SliderItems = [
     text: 'Нуреев Александр, менеджер проекта Winamp Russian Community',
   },
 ];
+ 
