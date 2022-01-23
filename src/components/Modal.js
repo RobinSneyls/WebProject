@@ -33,7 +33,7 @@ const Modal = ({ active, setActive, children }) => {
           className="Modal__close"
           onClick={() => {
             history.push('/');
-            setActive(true);
+            setActive(false);
           }}
         >
           ×
