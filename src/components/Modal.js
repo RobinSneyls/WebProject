@@ -30,7 +30,7 @@ const Modal = ({ active, setActive, children }) => {
         }}
       >
         <div
-          className="Modal__close"
+          className="Modal__close" 
           onClick={() => {
             history.push('/');
             setActive(false);
