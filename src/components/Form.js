@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import '../App.scss';
 import axios from 'axios';
 import { Button } from './Button';
-import '../App.scss';
 
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
@@ -75,7 +75,7 @@ const onSubmit = (data) => {
       />
       {errors.firstName?.type === 'required' && (
         <div className="FormSection__form-error">
-          Имя должно быть заполенным
+          Вы не заполниле поле имя
         </div>
       )}
       {errors.firstName?.type === 'maxLength' && (
@@ -93,22 +93,22 @@ const onSubmit = (data) => {
       />
       {errors.Phone?.type === 'required' && (
         <div className="FormSection__form-error">
-          Телефон должен быть заполенным
+          Вы не ввели телефон
         </div>
       )}
       {errors.Phone?.type === 'pattern' && (
         <div className="FormSection__form-error">
-          Телефон введен неправильно
+          Вы допустили ошибку при вводе телефона
         </div>
       )}
-      {errors.Phone?.type === 'valueAsNumber' && <div>неправильно</div>}
+      {errors.Phone?.type === 'valueAsNumber' && <div>Неравильный номер</div>}
       <input
         {...register('Email', {
           required: true,
           pattern:
             /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
         })}
-        placeholder="E-mail"
+        placeholder="e-mail"
         type="email"
         className="FormSection__form-mail"
       />
@@ -118,7 +118,7 @@ const onSubmit = (data) => {
         </div>
       )}
       {errors.Email?.type === 'pattern' && (
-        <div className="FormSection__form-error">Почта введена неправильно</div>
+        <div className="FormSection__form-error">Вы ввели почту неправильно</div>
       )}
       <textarea
         {...register('textArea', {
